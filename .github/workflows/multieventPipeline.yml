@@ -4,7 +4,10 @@ on:
     branches:
       - main
       - test
-      
+
+  pull_request: # event: whenever a pull request is created or updated
+    branches:
+      - main
 
 jobs:
   on-push: # job name
@@ -12,3 +15,9 @@ jobs:
     steps: #steps to be executed in job
         - name: "Running on main push"
           run: echo "This job runs on main push"
+
+  on-pull-request: # job name
+    runs-on: ubuntu-latest
+    steps: #steps to be executed in job
+        - name: "Running on pull request"
+          run: echo "This job runs on pull request"
