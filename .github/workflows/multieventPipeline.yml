@@ -8,6 +8,7 @@ on:
   pull_request: # event: whenever a pull request is created or updated
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   on-push: # job name
